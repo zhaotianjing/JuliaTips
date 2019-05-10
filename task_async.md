@@ -69,3 +69,13 @@ end
 #>> 0s
 
 But this code makes no sense because we always want to know the answer.
+
+
+### 5. Sleep() is special because sleep is nicely cooperating with tasks. Avoid testing with sleep().
+```
+@time @sync for i in 1:10
+    @async sleep(1)
+end
+```
+#>>1.007097 seconds (2.02 k allocations: 133.505 KiB)
+
