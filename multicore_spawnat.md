@@ -7,6 +7,7 @@ r = @spawnat 2 rand()
 Use `fetch()` to get the value.
 
 ### 2.DistributedArrays
+This combines the memory resources of multiple machines, allowing use of arrays too large to fit on one machine  
 Each process can read and write to the part of the array it owns and has read-only access to the parts it doesn't own
 
 ### 3. Multi-core is faster
