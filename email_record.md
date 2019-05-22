@@ -166,3 +166,9 @@ You don't need to ask
 for 1 node if you are only asking for 1 cpu and you don't need ntasks-per-node when asking for 1 core.
 
 
+By saying --mem=30GB you consume half a node, even if you use 1 CPU.  Generally using less nodes is
+more efficient than more.
+
+So 10 nodes * 0.5 = 5 nodes... which is more than your allocation.
+
+So ask for less memory per node, or ask for memory per cpu instead of memory per node.
