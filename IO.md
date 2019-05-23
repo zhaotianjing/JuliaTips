@@ -9,7 +9,7 @@ writedlm(io, geno_array,',')
 writedlm(io, geno_array,' ')
 ```
 
-Same size with `','`,` ` or `\t`
+Same size with `','`,`' '` or `'\t'`
 
 ```
 readdlm("delim_file.txt", ',')
