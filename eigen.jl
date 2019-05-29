@@ -18,6 +18,11 @@ XX3 = copy(XX)
 @show F3[end]
 
 
+XX4 = copy(XX)
+using Arpack
+eigs(XX4,nev=1)[1][1]
+
+
 #1. no need to Symmetric(XX2), because Julia will detect whether it is Symmetric.
 #2. eigmax: first do eigvals(), then return the maximum
 #3. both eigen!() and eigvals!() use BLAS function LAPACK.sygvd! if input is symmetric.
